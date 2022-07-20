@@ -1,4 +1,4 @@
-import {Component, useState } from 'react';
+import {Component } from 'react';
 import User from './User';
 
 import classes from './Users.module.css';
@@ -10,7 +10,8 @@ const DUMMY_USERS = [
 ];
 
 class Users extends Component {
-  constructor(props) {
+  constructor() {
+    super()
     this.state = {
       showUsers:true,
       more: 'Test',
@@ -31,7 +32,7 @@ class Users extends Component {
     );
     return (
       <div className={classes.users}>
-        <button onClick={this.toggleUsersHandler()}>
+        <button onClick={this.toggleUsersHandler.bind(this)}>
           {this.state.showUsers ? 'Hide' : 'Show'} Users
         </button>
         {this.state.showUsers && usersList}
