@@ -33,3 +33,6 @@ const UserFinder = () => {
 };
 
 export default UserFinder;
+
+
+//filter , include , useEffect  3 think i need to work for that 
